@@ -52,6 +52,6 @@ async function getCommentsForPost(postId) {
 
 
 
-module.exports = { updateComment, getCommentsForPost }; // Додайте getCommentsForPost до експорту
+module.exports = { updateComment, getCommentsForPost }; 
 
 
