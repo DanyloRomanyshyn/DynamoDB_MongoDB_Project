@@ -37,7 +37,7 @@ async function savePostToDynamoDB(post) {
       content: post.content,
       createdDate: post.createdDate,
       ModifiedDateTime: new Date().toISOString(),
-      // Додайте інші необхідні поля з MongoDB поста
+      
     }
   };
 
