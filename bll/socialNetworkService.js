@@ -1,13 +1,12 @@
 // bll/socialNetworkService.js
 const { updatePost } = require('../dal/dynamodb/postRepository');
-const { updateComment, getCommentsForPost } = require('../dal/dynamodb/commentRepository'); // Додали getCommentsForPost
-
+const { updateComment, getCommentsForPost } = require('../dal/dynamodb/commentRepository'); 
 
 const { MongoClient } = require('mongodb');
 const { savePostToDynamoDB } = require('../dal/dynamodb/postRepository');
 
 async function fetchPostsFromMongoDB() {
-  const client = new MongoClient('mongodb://localhost:27017'); // Вкажіть ваш MongoDB URI
+  const client = new MongoClient('mongodb://localhost:27017'); 
   try {
     await client.connect();
     const database = client.db('yourDatabaseName');
