@@ -1,13 +1,13 @@
 const { MongoClient } = require('mongodb');
-const { importPostsToDynamoDB } = require('./bll/socialNetworkService'); // Імпортуйте вашу функцію для імпорту до DynamoDB
+const { importPostsToDynamoDB } = require('./bll/socialNetworkService'); 
 
 // Функція для отримання постів з MongoDB
 async function fetchPostsFromMongoDB() {
-  const client = new MongoClient('mongodb://localhost:27017'); // Замініть на ваш MongoDB URI
+  const client = new MongoClient('mongodb://localhost:27017'); 
   try {
     await client.connect();
-    const database = client.db('social_network'); // Замініть на ім'я вашої бази даних
-    const collection = database.collection('posts'); // Замініть на ім'я колекції
+    const database = client.db('social_network'); 
+    const collection = database.collection('posts'); 
     const posts = await collection.find({}).toArray();
     console.log('Posts retrieved from MongoDB:', posts);
     return posts;
